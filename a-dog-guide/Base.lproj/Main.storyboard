@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PQ8-Ze-5eS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PQ8-Ze-5eS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--A Dog Guide-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="a_dog_guide" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,6 +21,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Show all breeds"/>
                                 <connections>
+                                    <action selector="onButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n95-ZM-KWZ"/>
                                     <segue destination="SOM-kc-Mv2" kind="show" id="HYi-RE-8Wy"/>
                                 </connections>
                             </button>
@@ -34,7 +35,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nwb-DE-9PP"/>
+                    <navigationItem key="navigationItem" title="A Dog Guide" id="nwb-DE-9PP"/>
                     <connections>
                         <outlet property="showAllBreeds" destination="V0k-qJ-YV7" id="D9N-co-TNv"/>
                     </connections>
@@ -43,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="139" y="102"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Breeds-->
         <scene sceneID="8ww-9I-kU5">
             <objects>
                 <tableViewController id="SOM-kc-Mv2" sceneMemberID="viewController">
@@ -52,25 +53,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OnD-09-cVZ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OnD-09-cVZ" customClass="DespacitoTableViewCell" customModule="a_dog_guide" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OnD-09-cVZ" id="Lcr-hq-H2X">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇺🇦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-9m-wGF">
+                                            <rect key="frame" x="20" y="11" width="23" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwa-be-Tw7">
+                                            <rect key="frame" x="337" y="6" width="69" height="30.5"/>
+                                            <state key="normal" title="Luis Fonsi"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="b0E-9m-wGF" secondAttribute="bottom" constant="0.5" id="44x-AT-yFs"/>
+                                        <constraint firstItem="b0E-9m-wGF" firstAttribute="top" secondItem="Lcr-hq-H2X" secondAttribute="topMargin" id="6MI-w7-Jah"/>
+                                        <constraint firstAttribute="bottom" secondItem="Gwa-be-Tw7" secondAttribute="bottom" constant="7.5" id="ChY-de-bXb"/>
+                                        <constraint firstItem="b0E-9m-wGF" firstAttribute="leading" secondItem="Lcr-hq-H2X" secondAttribute="leadingMargin" id="NIb-ig-QXL"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gwa-be-Tw7" secondAttribute="trailing" constant="8" id="VrT-BR-wrs"/>
+                                        <constraint firstItem="Gwa-be-Tw7" firstAttribute="top" secondItem="Lcr-hq-H2X" secondAttribute="top" constant="6" id="alf-Is-Pv8"/>
+                                        <constraint firstItem="Gwa-be-Tw7" firstAttribute="leading" relation="lessThanOrEqual" secondItem="b0E-9m-wGF" secondAttribute="trailing" constant="294" id="gyr-oB-ZmE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="button" destination="Gwa-be-Tw7" id="zwh-JU-XM1"/>
+                                    <outlet property="flag" destination="b0E-9m-wGF" id="2qi-Za-Nlg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="SOM-kc-Mv2" id="uYR-Hu-Cvh"/>
                             <outlet property="delegate" destination="SOM-kc-Mv2" id="8PJ-Kz-Ufl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zRo-wL-mjl"/>
+                    <navigationItem key="navigationItem" title="Breeds" leftItemsSupplementBackButton="YES" id="zRo-wL-mjl">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="oUg-Cn-fJ9"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEi-Sc-eg3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="102"/>
+            <point key="canvasLocation" x="1179.7101449275362" y="101.78571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qz4-JP-NVz">

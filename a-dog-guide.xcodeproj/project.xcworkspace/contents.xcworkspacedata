@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:a-dog-guide.xcodeproj">
+      location = "group:../a-dog-guide/ResourceNetworking">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
