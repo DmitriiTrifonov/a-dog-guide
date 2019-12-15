@@ -17,6 +17,7 @@
 		F149A9B5239C358D000F96C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F149A9B4239C358D000F96C8 /* Assets.xcassets */; };
 		F149A9B8239C358D000F96C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F149A9B6239C358D000F96C8 /* LaunchScreen.storyboard */; };
 		F14C40DC23A5888400CF700F /* SubBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14C40DB23A5888400CF700F /* SubBreed.swift */; };
+		F1DAA7FC23A6D51600286162 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAA7FB23A6D51600286162 /* DogImage.swift */; };
 		F1F6B12D23A4F8B200282689 /* DespacitoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F6B12C23A4F8B200282689 /* DespacitoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		F149A9B7239C358D000F96C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F149A9B9239C358D000F96C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F14C40DB23A5888400CF700F /* SubBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBreed.swift; sourceTree = "<group>"; };
+		F1DAA7FB23A6D51600286162 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 		F1F6B12C23A4F8B200282689 /* DespacitoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespacitoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				F13AD39F23A5004600D525DF /* Breed.swift */,
 				F13AD3A123A5022B00D525DF /* DogResponse.swift */,
 				F14C40DB23A5888400CF700F /* SubBreed.swift */,
+				F1DAA7FB23A6D51600286162 /* DogImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				F149A9AC239C3588000F96C8 /* AppDelegate.swift in Sources */,
 				F1F6B12D23A4F8B200282689 /* DespacitoTableViewCell.swift in Sources */,
 				F13AD3A023A5004600D525DF /* Breed.swift in Sources */,
+				F1DAA7FC23A6D51600286162 /* DogImage.swift in Sources */,
 				F149A9AE239C3588000F96C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
 import Foundation
 import ResourceNetworking
 
-struct Breed : Codable{
+struct Breed {
     let name: String
     let subBreed: [SubBreed]
     
@@ -33,4 +33,6 @@ class ResourceFactory {
     func createResource() -> Resource<DogResponse> {
         return Resource(url: URL(string: "https://dog.ceo/api/breeds/list/all")!, headers: nil)
     }
+    
 }
+
