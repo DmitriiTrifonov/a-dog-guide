@@ -21,8 +21,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Show all breeds"/>
                                 <connections>
-                                    <action selector="onButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n95-ZM-KWZ"/>
-                                    <segue destination="SOM-kc-Mv2" kind="show" id="HYi-RE-8Wy"/>
+                                    <segue destination="ibg-Q0-v3k" kind="show" id="b4y-As-Xye"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,70 +35,41 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="A Dog Guide" id="nwb-DE-9PP"/>
-                    <connections>
-                        <outlet property="showAllBreeds" destination="V0k-qJ-YV7" id="D9N-co-TNv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="102"/>
         </scene>
-        <!--Breeds-->
-        <scene sceneID="8ww-9I-kU5">
+        <!--Breed List View Controller-->
+        <scene sceneID="SJL-Nt-cnq">
             <objects>
-                <tableViewController id="SOM-kc-Mv2" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zug-QG-QgA">
+                <viewController id="ibg-Q0-v3k" customClass="BreedListViewController" customModule="a_dog_guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DWg-Bd-tWN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PNg-aY-B75">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OnD-09-cVZ" customClass="DespacitoTableViewCell" customModule="a_dog_guide" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OnD-09-cVZ" id="Lcr-hq-H2X">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇺🇦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-9m-wGF">
-                                            <rect key="frame" x="20" y="11" width="23" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwa-be-Tw7">
-                                            <rect key="frame" x="337" y="6" width="69" height="30.5"/>
-                                            <state key="normal" title="Luis Fonsi"/>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="b0E-9m-wGF" secondAttribute="bottom" constant="0.5" id="44x-AT-yFs"/>
-                                        <constraint firstItem="b0E-9m-wGF" firstAttribute="top" secondItem="Lcr-hq-H2X" secondAttribute="topMargin" id="6MI-w7-Jah"/>
-                                        <constraint firstAttribute="bottom" secondItem="Gwa-be-Tw7" secondAttribute="bottom" constant="7.5" id="ChY-de-bXb"/>
-                                        <constraint firstItem="b0E-9m-wGF" firstAttribute="leading" secondItem="Lcr-hq-H2X" secondAttribute="leadingMargin" id="NIb-ig-QXL"/>
-                                        <constraint firstAttribute="trailing" secondItem="Gwa-be-Tw7" secondAttribute="trailing" constant="8" id="VrT-BR-wrs"/>
-                                        <constraint firstItem="Gwa-be-Tw7" firstAttribute="top" secondItem="Lcr-hq-H2X" secondAttribute="top" constant="6" id="alf-Is-Pv8"/>
-                                        <constraint firstItem="Gwa-be-Tw7" firstAttribute="leading" relation="lessThanOrEqual" secondItem="b0E-9m-wGF" secondAttribute="trailing" constant="294" id="gyr-oB-ZmE"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="button" destination="Gwa-be-Tw7" id="zwh-JU-XM1"/>
-                                    <outlet property="flag" destination="b0E-9m-wGF" id="2qi-Za-Nlg"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="SOM-kc-Mv2" id="uYR-Hu-Cvh"/>
-                            <outlet property="delegate" destination="SOM-kc-Mv2" id="8PJ-Kz-Ufl"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Breeds" leftItemsSupplementBackButton="YES" id="zRo-wL-mjl">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="oUg-Cn-fJ9"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEi-Sc-eg3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="PNg-aY-B75" firstAttribute="trailing" secondItem="Sc9-Us-W46" secondAttribute="trailing" id="C29-7U-WJm"/>
+                            <constraint firstItem="PNg-aY-B75" firstAttribute="leading" secondItem="Sc9-Us-W46" secondAttribute="leading" id="ume-xg-oO7"/>
+                            <constraint firstItem="Sc9-Us-W46" firstAttribute="bottom" secondItem="PNg-aY-B75" secondAttribute="bottom" id="uxD-nT-8jm"/>
+                            <constraint firstItem="PNg-aY-B75" firstAttribute="top" secondItem="Sc9-Us-W46" secondAttribute="top" id="zM3-5z-lds"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sc9-Us-W46"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yeO-67-sBj"/>
+                    <connections>
+                        <outlet property="tableView" destination="PNg-aY-B75" id="Pxd-J8-THp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUm-qd-lLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1179.7101449275362" y="101.78571428571428"/>
+            <point key="canvasLocation" x="1124.6376811594205" y="101.78571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qz4-JP-NVz">

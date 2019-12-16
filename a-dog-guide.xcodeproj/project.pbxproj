@@ -10,6 +10,9 @@
 		F13AD39D23A4FEDB00D525DF /* ResourceNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13AD39923A4FEC400D525DF /* ResourceNetworking.framework */; };
 		F13AD3A023A5004600D525DF /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13AD39F23A5004600D525DF /* Breed.swift */; };
 		F13AD3A223A5022B00D525DF /* DogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13AD3A123A5022B00D525DF /* DogResponse.swift */; };
+		F13F433E23A77FBC009077AF /* BreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13F433C23A77FBC009077AF /* BreedTableViewCell.swift */; };
+		F13F433F23A77FBC009077AF /* BreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13F433D23A77FBC009077AF /* BreedTableViewCell.xib */; };
+		F13F434123A784A4009077AF /* BreedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13F434023A784A4009077AF /* BreedListViewController.swift */; };
 		F149A9AC239C3588000F96C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149A9AB239C3588000F96C8 /* AppDelegate.swift */; };
 		F149A9AE239C3588000F96C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149A9AD239C3588000F96C8 /* SceneDelegate.swift */; };
 		F149A9B0239C3588000F96C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149A9AF239C3588000F96C8 /* ViewController.swift */; };
@@ -18,7 +21,6 @@
 		F149A9B8239C358D000F96C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F149A9B6239C358D000F96C8 /* LaunchScreen.storyboard */; };
 		F14C40DC23A5888400CF700F /* SubBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14C40DB23A5888400CF700F /* SubBreed.swift */; };
 		F1DAA7FC23A6D51600286162 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DAA7FB23A6D51600286162 /* DogImage.swift */; };
-		F1F6B12D23A4F8B200282689 /* DespacitoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F6B12C23A4F8B200282689 /* DespacitoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		F13AD39323A4FEC400D525DF /* ResourceNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResourceNetworking.xcodeproj; path = "a-dog-guide/ResourceNetworking/ResourceNetworking.xcodeproj"; sourceTree = "<group>"; };
 		F13AD39F23A5004600D525DF /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		F13AD3A123A5022B00D525DF /* DogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogResponse.swift; sourceTree = "<group>"; };
+		F13F433C23A77FBC009077AF /* BreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewCell.swift; sourceTree = "<group>"; };
+		F13F433D23A77FBC009077AF /* BreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedTableViewCell.xib; sourceTree = "<group>"; };
+		F13F434023A784A4009077AF /* BreedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewController.swift; sourceTree = "<group>"; };
 		F149A9A8239C3588000F96C8 /* a-dog-guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "a-dog-guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F149A9AB239C3588000F96C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F149A9AD239C3588000F96C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +57,6 @@
 		F149A9B9239C358D000F96C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F14C40DB23A5888400CF700F /* SubBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBreed.swift; sourceTree = "<group>"; };
 		F1DAA7FB23A6D51600286162 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
-		F1F6B12C23A4F8B200282689 /* DespacitoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespacitoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F13F433923A77F66009077AF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F13F433C23A77FBC009077AF /* BreedTableViewCell.swift */,
+				F13F433D23A77FBC009077AF /* BreedTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F149A99F239C3588000F96C8 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +128,7 @@
 		F149A9AA239C3588000F96C8 /* a-dog-guide */ = {
 			isa = PBXGroup;
 			children = (
+				F13F433923A77F66009077AF /* Cells */,
 				F13AD39E23A4FFDD00D525DF /* Model */,
 				F149A9AB239C3588000F96C8 /* AppDelegate.swift */,
 				F149A9AD239C3588000F96C8 /* SceneDelegate.swift */,
@@ -123,7 +137,7 @@
 				F149A9B4239C358D000F96C8 /* Assets.xcassets */,
 				F149A9B6239C358D000F96C8 /* LaunchScreen.storyboard */,
 				F149A9B9239C358D000F96C8 /* Info.plist */,
-				F1F6B12C23A4F8B200282689 /* DespacitoTableViewCell.swift */,
+				F13F434023A784A4009077AF /* BreedListViewController.swift */,
 			);
 			path = "a-dog-guide";
 			sourceTree = "<group>";
@@ -209,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F13F433F23A77FBC009077AF /* BreedTableViewCell.xib in Resources */,
 				F149A9B8239C358D000F96C8 /* LaunchScreen.storyboard in Resources */,
 				F149A9B5239C358D000F96C8 /* Assets.xcassets in Resources */,
 				F149A9B3239C3588000F96C8 /* Main.storyboard in Resources */,
@@ -222,11 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F13F433E23A77FBC009077AF /* BreedTableViewCell.swift in Sources */,
 				F149A9B0239C3588000F96C8 /* ViewController.swift in Sources */,
 				F14C40DC23A5888400CF700F /* SubBreed.swift in Sources */,
+				F13F434123A784A4009077AF /* BreedListViewController.swift in Sources */,
 				F13AD3A223A5022B00D525DF /* DogResponse.swift in Sources */,
 				F149A9AC239C3588000F96C8 /* AppDelegate.swift in Sources */,
-				F1F6B12D23A4F8B200282689 /* DespacitoTableViewCell.swift in Sources */,
 				F13AD3A023A5004600D525DF /* Breed.swift in Sources */,
 				F1DAA7FC23A6D51600286162 /* DogImage.swift in Sources */,
 				F149A9AE239C3588000F96C8 /* SceneDelegate.swift in Sources */,

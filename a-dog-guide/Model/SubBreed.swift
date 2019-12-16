@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct SubBreed: Codable {
+struct SubBreed {
     let name: String
 }
