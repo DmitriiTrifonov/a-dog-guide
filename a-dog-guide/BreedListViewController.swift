@@ -26,7 +26,7 @@ class BreedListViewController: UIViewController {
     
     let semaphore = DispatchSemaphore(value: 1)
     
-    var breeds: [Breed] = []{
+    var breeds: [Dog] = []{
         didSet {
             semaphore.signal()
             DispatchQueue.main.async {
@@ -38,7 +38,7 @@ class BreedListViewController: UIViewController {
         }
     }
     
-    var imgUrl: DogImage? = nil
+    var imgUrl: [DogImage]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,21 +50,12 @@ class BreedListViewController: UIViewController {
         _ = networkHelper.load(resource: ResourceFactory().createResource()) { [weak self] result in
         switch result{
         case let .success(answer):
-            self!.breeds = Breed.getBreedList(from: answer.message)
+            self!.breeds = Dog.createDogList(from: Breed.getBreedList(from: answer.message))
         default:
             break
         }
            }
         
-//        _ = networkHelper.load(resource: ResourceFactory().createImageResource()) { [weak self] result in
-//        switch result{
-//        case let .success(a):
-//            print(a)
-//            self!.imgUrl = a
-//        default:
-//            break
-//        }
-//           }
         
         tableView.reloadData()
     }
@@ -91,7 +82,15 @@ extension BreedListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.breedCell) as! BreedTableViewCell
-        cell.breedLabel.text = breeds[indexPath.row].name
+        //cell.breedLabel.text = breeds[indexPath.row].name
+        let dog = breeds[indexPath.row]
+        cell.breedLabel.text = dog.caps
+        print(dog.photoGetUrl)
+        dog.getImgUrl {
+            i in
+            cell.setImage(from: i)
+        }
         return cell
     }
 }
+

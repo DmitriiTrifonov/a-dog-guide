@@ -17,10 +17,3 @@ struct DogImage: Codable {
     }
     
 }
-
-
-extension ResourceFactory {
-    func createImageResource() -> Resource<DogImage> {
-    return Resource(url: URL(string: "https://dog.ceo/api/breeds/image/random")!, headers: nil)
-    }
-}
