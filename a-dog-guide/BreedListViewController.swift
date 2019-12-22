@@ -56,7 +56,6 @@ class BreedListViewController: UIViewController {
         }
            }
         
-        
         tableView.reloadData()
     }
     
